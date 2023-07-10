@@ -1,7 +1,7 @@
 import allure
 
 from pages.not_login import NotLogin
-from pages.users import test_users
+from users import test_users
 
 
 # @allure.step('Покупка виниловой пластинки без регистрации на сайте')
