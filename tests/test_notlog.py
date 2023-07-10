@@ -18,6 +18,6 @@ def test_not_login():
         not_login.buy_not_logo()
 
 
-#    with allure.step("Подтверждение покупки"):
-#        not_login.buy_name(test_user)
+    with allure.step("Подтверждение покупки"):
+        not_login.buy_name(test_user)
 
