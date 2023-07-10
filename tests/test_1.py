@@ -23,5 +23,3 @@ def test_not_login(setup_browser):
 #    with allure.step("Подтверждение покупки"):
 #        not_login.buy_name(test_user)
 
-def test_puk():
-    pass
