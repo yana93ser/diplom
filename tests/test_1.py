@@ -1,3 +1,6 @@
+def test_1():
+    pass
+
 import allure
 
 from pages.not_login import NotLogin
