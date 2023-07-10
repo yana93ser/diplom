@@ -1,7 +1,7 @@
 import allure
 
 from pages.not_login import NotLogin
-from users import test_users
+from pages.users import test_user
 
 
 # @allure.step('Покупка виниловой пластинки без регистрации на сайте')
@@ -17,4 +17,4 @@ def test_not_login():
     with allure.step("Покупка пластинки незарегистрированным пользователем"):
         not_login.buy_not_logo()
     with allure.step("Подтверждение покупки"):
-        not_login.buy_name(test_users)
+        not_login.buy_name(test_user)

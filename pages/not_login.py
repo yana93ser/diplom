@@ -1,6 +1,6 @@
 from selene import browser
 
-from users import Users
+from pages.users import Users
 
 
 class NotLogin:
