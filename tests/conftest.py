@@ -1,5 +1,6 @@
 import os
 
+
 import pytest
 from dotenv import load_dotenv
 from selenium import webdriver
@@ -54,3 +55,4 @@ def setup_browser(request):
     attach.add_logs(browser)
     attach.add_video(browser)
     browser.quit()
+    
