@@ -21,7 +21,7 @@ def load_env():
     load_dotenv()
 
 
-@pytest.fixture(scope='session', autouse=True)
+@pytest.fixture(scope='function')
 def setup_browser(request):
     browser_version = request.config.getoption('--browser_version')
     browser_version = browser_version if browser_version != "" else DEFAULT_BROWSER_VERSION
@@ -43,8 +43,9 @@ def setup_browser(request):
         command_executor=f"https://{login}:{password}@selenoid.autotests.cloud/wd/hub",
         options=options
     )
+
     browser = Browser(Config(driver))
-    browser.config.driver.maximize_window()
+    browser.driver.maximize_window()
 
     yield browser
 
