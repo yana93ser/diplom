@@ -1,13 +1,10 @@
 import os
-
-
+from utils import attach
 import pytest
-from dotenv import load_dotenv
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selene import Browser, Config
-
-from utils import attach
+from dotenv import load_dotenv
 
 DEFAULT_BROWSER_VERSION = "100.0"
 
@@ -47,6 +44,7 @@ def setup_browser(request):
         options=options
     )
     browser = Browser(Config(driver))
+    browser.driver.maximize_window()
 
     yield browser
 
@@ -55,4 +53,3 @@ def setup_browser(request):
     attach.add_logs(browser)
     attach.add_video(browser)
     browser.quit()
-    

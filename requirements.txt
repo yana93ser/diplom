@@ -1,5 +1,6 @@
-selene>=2.0.0b4
+selene==2.0.0b5
 allure-pytest
 pytest~=7.4.0
 selenium~=4.10.0
 python-dotenv~=1.0.0
+webdriver-manager
