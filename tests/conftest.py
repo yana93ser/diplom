@@ -44,6 +44,7 @@ def setup_browser(request):
         options=options
     )
     browser = Browser(Config(driver))
+    browser.driver.maximize_window()
 
     yield browser
 
