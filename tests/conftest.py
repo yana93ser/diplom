@@ -7,6 +7,9 @@ from selene import Browser, Config
 from dotenv import load_dotenv
 from selenium.webdriver.chrome.service import Service as ChromeService
 from webdriver_manager.chrome import ChromeDriverManager
+import chromedriver_autoinstaller
+
+
 DEFAULT_BROWSER_VERSION = "100.0"
 
 
