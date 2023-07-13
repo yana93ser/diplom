@@ -4,10 +4,9 @@ from pages.users import Users
 
 
 class NotLogin:
-    @staticmethod
     def open(self):
         browser.open('/')
-
+        return self
 
     def finde_lp(self, name):
         browser.element("#edit-search-api-views-fulltext").type(name).press_enter()
