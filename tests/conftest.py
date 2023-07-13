@@ -44,6 +44,7 @@ def setup_browser(request):
         options=options
     )
     browser = Browser(Config(driver))
+    browser.config.base_url('https://imagine-club.com')
     browser.driver.maximize_window()
 
     yield browser
