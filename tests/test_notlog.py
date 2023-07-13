@@ -5,7 +5,7 @@ from pages.users import test_user
 
 
 # @allure.step('Покупка виниловой пластинки без регистрации на сайте')
-def test_not_login(setup_browser):
+def test_not_login():
     not_login = NotLogin()
 
     with allure.step("Открыть страницу магазина"):
