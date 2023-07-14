@@ -1,4 +1,7 @@
 import os
+
+from selene.support.shared import browser
+
 from utils import attach
 import pytest
 from selenium import webdriver
@@ -7,8 +10,6 @@ from selene import Browser, Config
 from dotenv import load_dotenv
 from selenium.webdriver.chrome.service import Service as ChromeService
 from webdriver_manager.chrome import ChromeDriverManager
-
-
 
 DEFAULT_BROWSER_VERSION = "100.0"
 
@@ -42,7 +43,6 @@ def setup_browser(request):
 
     login = os.getenv('LOGIN')
     password = os.getenv('PASSWORD')
-
 
     driver = webdriver.Remote(
         command_executor=f"https://{login}:{password}@selenoid.autotests.cloud/wd/hub",
