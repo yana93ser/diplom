@@ -1,11 +1,9 @@
 from selene.support.shared import browser
 
 from pages.users import Users
-from tests.conftest import setup_browser
 
 
 class NotLogin:
-    browser = setup_browser
     def open(self):
         browser.open("https://imagine-club.com/")
         return self
