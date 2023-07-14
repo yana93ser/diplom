@@ -49,7 +49,7 @@ def setup_browser(request):
         options=options
     )
 
-    browser.config.driver = driver
+    browser = Browser(Config(driver))
     browser.driver.maximize_window()
 
     yield browser
