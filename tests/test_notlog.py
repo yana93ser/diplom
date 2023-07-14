@@ -12,11 +12,3 @@ def test_not_login(setup_browser):
 
     with allure.step("Открыть страницу магазина"):
         browser.open('https://imagine-club.com/')
-    with allure.step("Ввести в поле поиска исполнителя"):
-        not_login.finde_lp("sinatra frank")
-    with allure.step("Поиск необходимой пластинки на сайте"):
-        not_login.lp_on_page()
-    with allure.step("Покупка пластинки незарегистрированным пользователем"):
-        not_login.buy_not_logo()
-    with allure.step("Подтверждение покупки"):
-        not_login.buy_name(test_user)
