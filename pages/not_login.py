@@ -5,7 +5,7 @@ from pages.users import Users
 
 class NotLogin:
 
-    def open (self):
+    def open_page(self):
         browser.open('https://imagine-club.com/')
         return self
 
