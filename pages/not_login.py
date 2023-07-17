@@ -1,11 +1,10 @@
-from selene import browser
-
 from pages.users import Users
+from selene.support.shared import browser
 
 
 class NotLogin:
     def open(self):
-        browser.open('/')
+        browser.open('https://imagine-club.com/')
         return self
 
     def finde_lp(self, name):

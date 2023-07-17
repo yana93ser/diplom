@@ -1,15 +1,12 @@
 import os
 
-from selene.support.shared import browser
-
-from utils import attach
 import pytest
+from dotenv import load_dotenv
+from selene.support.shared import browser
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
-from selene import Browser, Config
-from dotenv import load_dotenv
-from selenium.webdriver.chrome.service import Service as ChromeService
-from webdriver_manager.chrome import ChromeDriverManager
+
+from utils import attach
 
 DEFAULT_BROWSER_VERSION = "100.0"
 
