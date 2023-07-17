@@ -11,7 +11,7 @@ def test_not_login(setup_browser):
     not_login = NotLogin()
 
     with allure.step("Открыть страницу магазина"):
-        not_login.open()
+        browser.open('https://imagine-club.com/')
         browser.element("#edit-search-api-views-fulltext").type('sinatra').press_enter()
         browser.element('#commerce-cart-add-to-cart-form-86089').click()
         browser.element("#block-commerce-popup-cart-commerce-popup-cart").click()
