@@ -4,15 +4,18 @@ from pages.not_login import NotLogin
 from pages.users import test_user
 
 
-
-# @allure.step('Покупка виниловой пластинки без регистрации на сайте')
+@allure.step('Покупка виниловой пластинки без регистрации на сайте')
 def test_not_login(setup_browser):
     browser = setup_browser
     not_login = NotLogin()
 
     with allure.step("Открыть страницу магазина"):
         not_login.open()
-        browser.element("#edit-search-api-views-fulltext").type('sinatra').press_enter()
-        browser.element('#commerce-cart-add-to-cart-form-86089').click()
-        browser.element("#block-commerce-popup-cart-commerce-popup-cart").click()
-        browser.element('#edit-checkout').click()
+    with allure.step("Ввести в поле поиска исполнителя"):
+        not_login.finde_lp("sinatra frank")
+    with allure.step("Поиск необходимой пластинки на сайте"):
+        not_login.lp_on_page()
+    with allure.step("Покупка пластинки незарегистрированным пользователем"):
+        not_login.buy_not_logo()
+    with allure.step("Подтверждение покупки"):
+        not_login.buy_name(test_user)
